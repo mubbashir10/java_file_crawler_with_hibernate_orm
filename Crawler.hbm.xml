@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="Crawler" table="fileHash">
+      <meta attribute="class-description">
+         This class contains file absolute paths and their hashes.
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="path" column="path" type="string"/>
+      <property name="hash" column="hash" type="string"/>
+   </class>
+</hibernate-mapping>
